@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>BlankSharedApp1.Windows</title>
+
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+    <!-- BlankSharedApp1.Windows references -->
+    <link href="CSS\Todo.css" rel="stylesheet" type="text/css">
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+</head>
+<body>
+    <div class="four">
+        <h1>  </h1>
+        <input class="fields" id="name" type="text" placeholder="Name">
+        <input class="fields" id="email" type="text" placeholder="Email Address">
+        <input class="fields" id="phone" type="text" placeholder="Phone Number">
+        <input class="fields" id="mess" type="text" placeholder="Message">
+
+        <input class="mybtn" style="margin-bottom: 50px;"  type="button" onclick="myfunc()" value="Send" >
+        <input class="mybtn" style="margin-bottom: 50px;" type="button" onclick="checkFunc()" value="get">
+
+    </div>
+
+    <script>
+        var myFirebaseRef = new Firebase("https://panatest.firebaseio.com");
+
+        function myfunc() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var message = document.getElementById("mess").value;
+           // alert(name + email + phone + mess);
+
+            myFirebaseRef.set({
+                Name: name,
+                Email: email,
+                Phone: phone,
+                Message: message,
+            });  
+        }
+
+
+
+        function checkFunc() {
+            myFirebaseRef.child("Email").on("value", function (snapshot) {
+                alert(snapshot.val());  // Alerts "science"
+            });
+        }
+
+        myFirebaseRef.update({
+            Email: "north karachi"
+        });
+    </script>
+</body>
+</html>

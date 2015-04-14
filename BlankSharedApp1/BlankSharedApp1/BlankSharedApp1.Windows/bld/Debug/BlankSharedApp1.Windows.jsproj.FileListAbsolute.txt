@@ -1,0 +1,15 @@
+c:\users\farha\documents\visual studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bin\Debug\ReverseMap\resources.pri
+c:\users\farha\documents\visual studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bin\Debug\AppxManifest.xml
+c:\users\farha\documents\visual studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bin\Debug\BlankSharedApp1.Windows.build.appxrecipe
+c:\users\farha\documents\visual studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bld\Debug\priconfig.xml
+c:\users\farha\documents\visual studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bld\Debug\priconfig.xml.intermediate
+c:\users\farha\documents\visual studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bld\Debug\layout.resfiles
+c:\users\farha\documents\visual studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bld\Debug\layout.resfiles.intermediate
+c:\users\farha\documents\visual studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bld\Debug\resources.resfiles
+c:\users\farha\documents\visual studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bld\Debug\resources.resfiles.intermediate
+c:\users\farha\documents\visual studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bld\Debug\pri.resfiles
+c:\users\farha\documents\visual studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bld\Debug\pri.resfiles.intermediate
+c:\users\farha\documents\visual studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bld\Debug\qualifiers.txt
+c:\users\farha\documents\visual studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bld\Debug\qualifiers.txt.intermediate
+c:\users\farha\documents\visual studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+c:\users\farha\documents\visual studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bld\Debug\ProjectArchitectures.txt

@@ -1,0 +1,45 @@
+.four{
+    width:980px;
+    height:400px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.four h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: black;
+
+}
+
+.four img{
+    margin-left: 340px;
+    width:299px;
+    margin-bottom: 10px;
+
+}
+
+
+.four .fields{
+    display: block;
+    margin-left: 200px;
+    height: 40px;
+    width: 500px;
+    border: none;
+}
+
+.four .mybtn{
+
+    margin-top:10px;
+    margin-left: 200px;
+    height: 35px;
+    width:  60px;
+    background-color: white;
+    display: block;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    color: black;
+    padding-left: 5px;
+    padding-right: 5px;
+}
