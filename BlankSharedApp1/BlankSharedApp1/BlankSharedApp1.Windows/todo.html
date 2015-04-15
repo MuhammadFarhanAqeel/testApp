@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <link href="css/todo.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+</head>
+<body>
+      <!--login Page-->
+      <div data-role="page" id="frontpage" style="background-image: url('images/backgroundimage.png');">
+          <div data-role="header" data-positon="fixed" data-theme="b" class="ui-content" style="text-align: center;">
+             TODO APP
+          </div>
+
+          <div data-role="main" id="login" data-theme="">
+
+              <input type="text" id="Login_username" data-clear-btn="true" name="username" placeholder="Username"  value="">
+              <input type="password" id="Login_pass" data-clear-btn="true" name="password" placeholder="Password"  value="" autocomplete="off">
+              <a href="#" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" onclick="loginFunc()" data-transition="slide"
+                 >Login</a>
+              <a href="#signup" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" data-transition="slide"
+                 >SignUp</a>
+
+          </div>
+
+          <div data-role="footer" data-theme="b" data-position="fixed" style="text-align: center; margin-bottom:0px; ">
+              <div data-role="controlgroup" data-type="horizontal">
+                  <a href="#add" class=" ui-btn  ui-btn-b ui-corner-all ui-shadow ui-icon-location  ui-btn-icon-left " data-transition="slide" data-direction="reverse" style="width: 130px; margin-right: 10px; ">Login With Facebook</a>
+                  <a href="#credits" class="ui-btn  ui-btn-b ui-corner-all ui-shadow ui-icon-info ui-btn-icon-left "
+                     data-transition="slide" data-direction="reverse" style="width: 130px; margin-right: 10px;">Info</a>
+              </div>
+          </div>
+      </div>
+
+      <!--SignUp Page-->
+      <div data-role="page" id="signup" style="background-image: url('images/backgroundimage.png');">
+          <div data-role="header" data-positon="fixed" data-theme="b" class="ui-content" style="text-align: center;">
+             SIGNUP
+              <a href="#frontpage" class="ui-btn ui-btn-right ui-icon-back ui-btn-icon-notext" data-transition="slide"
+                 data-direction="reverse"></a>
+          </div>
+
+          <div data-role="main" id="signup_content" data-theme="">
+              <input type="text" id="Name" data-clear-btn="true" name="name" placeholder="Name" value="">
+              <input type="email" id="Email" data-clear-btn="true" name="email" placeholder="Email"  value="">
+              <input type="text" id="Username" data-clear-btn="true" name="username" placeholder="Username" value="">
+              <input type="password" id="Password" data-clear-btn="true" name="password" placeholder="Password"  value="" autocomplete="off">
+              <input type="password"  data-clear-btn="true" name="password" placeholder="Retype-Password"  value="" autocomplete="off">
+              <a href="#" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" onclick="signUp()" data-transition="slide" style="width: 260px;"
+                      >SignUp</a>
+
+          </div>
+
+          <div data-role="footer" data-theme="b" data-position="fixed" style="text-align: center; margin-bottom:0px; ">
+              <div data-role="controlgroup" data-type="horizontal">
+                  <a href="#" class=" ui-btn  ui-btn-b ui-corner-all ui-shadow ui-icon-location  ui-btn-icon-left " data-transition="slide" data-direction="reverse" style="width: 130px; margin-right: 10px; ">Login With Facebook</a>
+                  <a href="#credits" class="ui-btn  ui-btn-b ui-corner-all ui-shadow ui-icon-info ui-btn-icon-left "
+                     data-transition="slide" data-direction="reverse" style="width: 130px; margin-right: 10px;">Info</a>
+              </div>
+          </div>
+      </div>
+
+      <!--Add Task-->
+      <div data-role="page" id="add" style="background-image: url('images/backgroundimage.png');">
+          <div data-role="header" data-positon="fixed" data-theme="b" class="ui-content" style="text-align: center;">
+              ADD TASK
+          </div>
+
+          <div data-role="main" id="add_content" data-theme="">
+              <input type="text" id="TaskName" data-clear-btn="true" name="username" placeholder="Assign Task to:" value="" style="">
+              <input type="text" id="TaskDetail" data-clear-btn="true" name="username" placeholder="Create Task" value="">
+              <a href="#" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" onclick="AddTask()" data-transition="slide" style="width: 115px;"
+                      >ADD TASK</a>
+              <a href="#edit" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" data-transition="slide" style="width: 115px;"
+                      >ViEW TASK</a>
+
+          </div>
+
+       </div>
+
+      <!--Edit Content-->
+      <div data-role="page" id="edit" style="background-image: url('images/backgroundimage.png');">
+          <div data-role="header" data-positon="fixed" data-theme="b" class="ui-content" style="text-align: center;">
+              VIEW TASK
+              <a href="#add" class="ui-btn ui-btn-right ui-icon-back ui-btn-icon-notext" data-transition="slide"
+                 data-direction="reverse"></a>
+          </div>
+
+          <div data-role="main" id="edit_content" data-theme="">
+              <table data-role="table" id="table-custom-2" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a">
+                           <thead>
+                         <tr class="ui-bar-d">
+                               <th data-priority="2">NAME</th>
+                               <th>TASK</th>
+                               <th data-priority="3">EDIT</th>
+                               <th data-priority="5">DELETE</th>
+                             </tr>
+                       </thead>
+                           <tbody>
+                         <tr>
+                               <th>Hammad</th>
+                               <td class="title">Excercise at 9</td>
+                               <td>EDIT</td>
+                               <td>DELETE</td>
+                             </tr>
+                       </tbody>
+                         </table>
+          </div>
+      </div>
+
+      <!--CREDITS-->
+      <div data-role="page" id="credits" style="background-image: url('images/backgroundimage.png');">
+
+          <div data-role="header" data-positon="fixed" data-theme="b" style="text-align: center;">
+              <p>CREDITS</p>
+              <a href="#signup" class="ui-btn ui-btn-right ui-icon-back ui-btn-icon-notext" data-transition="slide"
+                 data-direction="reverse"></a>
+          </div>
+
+          <div data-role="main" class="ui-content" style="background-image: url('images/backgroundimage.png');" >
+              <ul data-role="listview" data-inset="true" data-theme="b" style="margin-top: 50px;">
+                  <li><a href="#farhan" class="ui-li-icon">Farhan</a></li>
+                  <li><a href="#hammad" class="ui-li-icon">Hammad Shabbir</a></li>
+                  <li><a href="#fahad" class="ui-li-icon">M Fahad Patel</a></li>
+              </ul>
+          </div>
+
+          <div data-role="panel" id="farhan" data-display="reveal" data-position="right"
+               style="background-image: url('images/backgroundimage.png');">
+              <h2 class="panelheading">Farhan Aqeel</h2>
+              <p class="paneltext"> Software Developer</p>
+          </div>
+
+          <div data-role="panel" id="hammad" data-display="reveal" data-position="right"
+               style="background-image: url('images/backgroundimage.png');">
+              <h2 class="panelheading">Mohammad Hammad Shabbir</h2>
+              <p class="paneltext"> Software Developer</p>
+          </div>
+
+          <div data-role="panel" id="fahad" data-display="reveal" data-position="right"
+               style="background-image: url('images/backgroundimage.png');">
+              <h2 class="panelheading">M Fahad Patel</h2>
+              <p class="paneltext"> Software Developer</p>
+          </div>
+
+
+
+      </div>
+
+
+
+    <script>
+        var myFirebaseRef = new Firebase("https://panatest.firebaseio.com/Task");
+
+        function signUp() {
+            var name = document.getElementById("Name").value;
+            var email = document.getElementById("Email").value;
+            var username = document.getElementById("Username").value;
+            var password = document.getElementById("Password").value;
+            // alert(name + email + phone + mess);
+            
+           // var ref = myFirebaseRef.child(name);
+            myFirebaseRef.push({    Name: name,
+            Email: email,
+            Username: username,
+            password: password,
+            
+            });
+        }
+
+        function AddTask() {
+            var T_name = document.getElementById("TaskName").value;
+            var T_task = document.getElementById("TaskDetail").value;
+
+            myFirebaseRef.push({
+                Name: T_name,
+                Task: T_task
+            });
+        }
+
+      
+    </script>
+    
+
+</body>
+
+</html>

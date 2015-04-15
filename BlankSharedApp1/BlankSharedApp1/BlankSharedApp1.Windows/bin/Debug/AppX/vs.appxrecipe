@@ -7,7 +7,7 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>d12772bf-106e-4601-82de-32ac905cfdda</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bld\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bld\Debug\</IntermediateOutputPath>
     <RegisteredManifestChecksum>DEC140BCC846ACDBE030463ED2EF387B44DEB8C3C7F8FB0737185E6D728D4B96</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>d12772bf-106e-4601-82de-32ac905cfdda_1.0.0.0_neutral__8wf2pzj3zhqar</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>d12772bf-106e-4601-82de-32ac905cfdda_8wf2pzj3zhqar!App</RegisteredUserModeAppID>
@@ -17,48 +17,52 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-04-14T07:38:08.843</Modified>
+      <Modified>2015-04-14T11:58:20.663</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\default.html">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2015-04-14T11:22:08.554</Modified>
+      <Modified>2015-04-14T12:41:13.896</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\images\logo.png">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\images\blackstar.jpg">
+      <PackagePath>images\blackstar.jpg</PackagePath>
+      <Modified>2015-04-14T11:55:52.678</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\images\logo.png">
       <PackagePath>images\logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2014-11-07T23:55:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\images\smalllogo.png">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\images\smalllogo.png">
       <PackagePath>images\smalllogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2014-11-07T23:55:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\images\splashscreen.png">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\images\splashscreen.png">
       <PackagePath>images\splashscreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2014-11-07T23:55:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\images\storelogo.png">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\images\storelogo.png">
       <PackagePath>images\storelogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2014-11-07T23:55:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\css\default.css">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\css\default.css">
       <PackagePath>css\default.css</PackagePath>
       <Modified>2014-11-07T23:55:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Shared\js\default.js">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Shared\js\default.js">
       <PackagePath>js\default.js</PackagePath>
       <Modified>2015-04-14T07:35:49.245</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bin\Debug\ReverseMap\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-04-14T07:38:07.871</Modified>
+      <Modified>2015-04-14T11:58:19.966</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

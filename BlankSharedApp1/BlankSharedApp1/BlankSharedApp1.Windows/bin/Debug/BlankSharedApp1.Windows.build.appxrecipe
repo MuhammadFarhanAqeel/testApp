@@ -7,44 +7,44 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>d12772bf-106e-4601-82de-32ac905cfdda</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bld\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bld\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\default.html">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\default.html">
       <PackagePath>default.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\images\blackstar.jpg">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\images\blackstar.jpg">
       <PackagePath>images\blackstar.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\images\logo.png">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\images\logo.png">
       <PackagePath>images\logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\images\smalllogo.png">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\images\smalllogo.png">
       <PackagePath>images\smalllogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\images\splashscreen.png">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\images\splashscreen.png">
       <PackagePath>images\splashscreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\images\storelogo.png">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\images\storelogo.png">
       <PackagePath>images\storelogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\css\default.css">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\css\default.css">
       <PackagePath>css\default.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Shared\js\default.js">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Shared\js\default.js">
       <PackagePath>js\default.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bin\Debug\ReverseMap\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Windows\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
