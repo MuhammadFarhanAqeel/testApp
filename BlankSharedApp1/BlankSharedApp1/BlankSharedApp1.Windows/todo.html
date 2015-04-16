@@ -76,7 +76,11 @@
               <input type="text" id="TaskDetail" data-clear-btn="true" name="username" placeholder="Create Task" value="">
               <a href="#" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" onclick="AddTask()" data-transition="slide" style="width: 115px;"
                       >ADD TASK</a>
-              <a href="#edit" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" data-transition="slide" style="width: 115px;"
+
+              <a href="#" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" onclick="updateTask()" data-transition="slide" style="width: 115px;"
+                 >UPDATE TASK</a>
+
+              <a href="#edit" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" data-transition="slide" onclick="viewTask()" style="width: 115px;"
                       >ViEW TASK</a>
 
           </div>
@@ -85,7 +89,7 @@
 
       <!--Edit Content-->
       <div data-role="page" id="edit" style="background-image: url('images/backgroundimage.png');">
-          <div data-role="header" data-positon="fixed" data-theme="b" class="ui-content" style="text-align: center;">
+          <div data-role="header" data-positon="fixed" data-theme="b" class="ui-content"  style="text-align: center;">
               VIEW TASK
               <a href="#add" class="ui-btn ui-btn-right ui-icon-back ui-btn-icon-notext" data-transition="slide"
                  data-direction="reverse"></a>
@@ -103,7 +107,7 @@
                        </thead>
                            <tbody>
                          <tr>
-                               <th>Hammad</th>
+                               <th id="Data_name"></th>
                                <td class="title">Excercise at 9</td>
                                <td>EDIT</td>
                                <td>DELETE</td>
@@ -153,18 +157,19 @@
       </div>
 
 
-
+    <!--javascript code-->
     <script>
-        var myFirebaseRef = new Firebase("https://panatest.firebaseio.com/Task");
+        var myFirebaseRef;
+       
 
         function signUp() {
+            myFirebaseRef = new Firebase("https://panatest.firebaseio.com/users");
             var name = document.getElementById("Name").value;
             var email = document.getElementById("Email").value;
             var username = document.getElementById("Username").value;
             var password = document.getElementById("Password").value;
             // alert(name + email + phone + mess);
             
-           // var ref = myFirebaseRef.child(name);
             myFirebaseRef.push({    Name: name,
             Email: email,
             Username: username,
@@ -174,6 +179,7 @@
         }
 
         function AddTask() {
+            myFirebaseRef = new Firebase("https://panatest.firebaseio.com/Task");
             var T_name = document.getElementById("TaskName").value;
             var T_task = document.getElementById("TaskDetail").value;
 
@@ -183,7 +189,21 @@
             });
         }
 
-      
+        function viewTask() {
+            myFirebaseRef = new Firebase("https://panatest.firebaseio.com/Task");
+            var my =  myFirebaseRef.on("value", function (snapshot) {
+                
+                var obj = snapshot.val();
+                console.log(obj);
+                //alert(obj);
+                 console.log(typeof (obj));
+                document.getElementById("Data_name").innerHTML = Object.keys(obj);
+
+          }, function (errorObject) {
+            });
+        }
+
+       
     </script>
     
 

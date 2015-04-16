@@ -29,7 +29,7 @@
     </div>
 
     <script>
-        var myFirebaseRef = new Firebase("https://panatest.firebaseio.com");
+       /* var myFirebaseRef = new Firebase("https://panatest.firebaseio.com");
 
         function myfunc() {
             var name = document.getElementById("name").value;
@@ -56,6 +56,15 @@
 
         myFirebaseRef.update({
             Email: "north karachi"
+        });
+        */
+
+        var ref = new Firebase("https://docs-examples.firebaseio.com/web/saving-data/fireblog/posts");
+        // Attach an asynchronous callback to read the data at our posts reference
+        ref.on("value", function (snapshot) {
+            alert(snapshot.val());
+        }, function (errorObject) {
+            alert("The read failed: " + errorObject.code);
         });
     </script>
 </body>

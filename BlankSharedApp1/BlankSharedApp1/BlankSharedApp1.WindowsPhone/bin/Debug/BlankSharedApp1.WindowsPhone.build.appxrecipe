@@ -7,58 +7,58 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>6210fa82-a4e5-4eb2-99c8-57d21d08d75c</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\bld\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\bld\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\default.html">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\default.html">
       <PackagePath>default.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\images\Square150x150Logo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\images\Square150x150Logo.scale-240.png">
       <PackagePath>images\Square150x150Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\images\Square44x44Logo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\images\Square44x44Logo.scale-240.png">
       <PackagePath>images\Square44x44Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\images\Wide310x150Logo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\images\Wide310x150Logo.scale-240.png">
       <PackagePath>images\Wide310x150Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\images\Square71x71Logo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\images\Square71x71Logo.scale-240.png">
       <PackagePath>images\Square71x71Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\images\SplashScreen.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\images\SplashScreen.scale-240.png">
       <PackagePath>images\SplashScreen.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\images\StoreLogo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\images\StoreLogo.scale-240.png">
       <PackagePath>images\StoreLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\css\default.css">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\css\default.css">
       <PackagePath>css\default.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\css\ui-themed.css">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\css\ui-themed.css">
       <PackagePath>css\ui-themed.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\css\ui-themed.theme-dark.css">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\css\ui-themed.theme-dark.css">
       <PackagePath>css\ui-themed.theme-dark.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\css\ui-themed.theme-light.css">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\css\ui-themed.theme-light.css">
       <PackagePath>css\ui-themed.theme-light.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Shared\js\default.js">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.Shared\js\default.js">
       <PackagePath>js\default.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Farha\Documents\Visual Studio 2015\Projects\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\bin\Debug\ReverseMap\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Farha\Documents\GitHub\testApp\BlankSharedApp1\BlankSharedApp1\BlankSharedApp1.WindowsPhone\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
