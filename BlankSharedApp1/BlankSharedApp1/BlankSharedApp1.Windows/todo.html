@@ -54,6 +54,9 @@
               <a href="#" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" onclick="signUp()" data-transition="slide" style="width: 260px;"
                       >SignUp</a>
 
+              <a href="#" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" onclick="Delete_User()" data-transition="slide" style="width: 260px;"
+                 >DELETE USER</a>
+
           </div>
 
           <div data-role="footer" data-theme="b" data-position="fixed" style="text-align: center; margin-bottom:0px; ">
@@ -77,12 +80,16 @@
               <a href="#" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" onclick="AddTask()" data-transition="slide" style="width: 115px;"
                       >ADD TASK</a>
 
-              <a href="#" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" onclick="updateTask()" data-transition="slide" style="width: 115px;"
+            
+
+              <a href="#" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" onclick="Update_task()" data-transition="slide" style="width: 115px;"
                  >UPDATE TASK</a>
 
               <a href="#edit" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" data-transition="slide" onclick="viewTask()" style="width: 115px;"
                       >ViEW TASK</a>
-
+              <a href="#" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" onclick="Delete_Task()" data-transition="slide" style="width: 115px;"
+                 >DELETE TASK</a>
+              
           </div>
 
        </div>
@@ -96,24 +103,24 @@
           </div>
 
           <div data-role="main" id="edit_content" data-theme="">
-              <table data-role="table" id="table-custom-2" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a">
-                           <thead>
-                         <tr class="ui-bar-d">
-                               <th data-priority="2">NAME</th>
-                               <th>TASK</th>
-                               <th data-priority="3">EDIT</th>
-                               <th data-priority="5">DELETE</th>
-                             </tr>
-                       </thead>
-                           <tbody>
-                         <tr>
-                               <th id="Data_name"></th>
-                               <td class="title">Excercise at 9</td>
-                               <td>EDIT</td>
-                               <td>DELETE</td>
-                             </tr>
-                       </tbody>
-                         </table>
+              <table data-role="table" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a">
+                  <thead>
+                      <tr class="ui-bar-d">
+                          <th data-priority="2">NAME</th>
+                          <th>TASK</th>
+                          <th data-priority="3">EDIT</th>
+                          <th data-priority="5">DELETE</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <th id="Data_name" ></th>
+                          <td class="title">Excercise at 9</td>
+                          <td>EDIT</td>
+                          <td>DELETE</td>
+                      </tr>
+                  </tbody>
+              </table>
           </div>
       </div>
 
@@ -160,7 +167,6 @@
     <!--javascript code-->
     <script>
         var myFirebaseRef;
-       
 
         function signUp() {
             myFirebaseRef = new Firebase("https://panatest.firebaseio.com/users");
@@ -170,7 +176,7 @@
             var password = document.getElementById("Password").value;
             // alert(name + email + phone + mess);
             
-            myFirebaseRef.push({    Name: name,
+            myFirebaseRef.child(name).set({    
             Email: email,
             Username: username,
             password: password,
@@ -182,28 +188,67 @@
             myFirebaseRef = new Firebase("https://panatest.firebaseio.com/Task");
             var T_name = document.getElementById("TaskName").value;
             var T_task = document.getElementById("TaskDetail").value;
-
-            myFirebaseRef.push({
-                Name: T_name,
-                Task: T_task
+            
+            myFirebaseRef.child(T_name).set({
+               
+                    "Task": T_task
             });
         }
 
         function viewTask() {
-            myFirebaseRef = new Firebase("https://panatest.firebaseio.com/Task");
-            var my =  myFirebaseRef.on("value", function (snapshot) {
+
+           var myFirebaseRef = new Firebase("https://panatest.firebaseio.com/Task");
+           /* var my =  myFirebaseRef.on("child_added", function (snapshot) {
                 
                 var obj = snapshot.val();
                 console.log(obj);
                 //alert(obj);
                  console.log(typeof (obj));
-                document.getElementById("Data_name").innerHTML = Object.keys(obj);
+                 document.getElementById("Data_name").innerHTML = Object.keys(obj.Name);
 
           }, function (errorObject) {
             });
+        */
+          
+           myFirebaseRef.on("child_added", function (snapshot) {
+               var obj = snapshot.val();
+               console.log("Name: " + obj.Name);
+               
+               document.getElementById("Data_name").innerText += obj.Name;
+           });
+
         }
 
-       
+        function Delete_Task() {
+            var T_name = document.getElementById("TaskName").value;
+            myFirebaseRef = new Firebase("https://panatest.firebaseio.com/Task/" + T_name);
+            myFirebaseRef.remove();
+        }
+
+        function Delete_User() {
+            var name = document.getElementById("Name").value;
+
+            myFirebaseRef = new Firebase("https://panatest.firebaseio.com/users/" + name);
+            myFirebaseRef.remove();
+        }
+
+        function Update_task() {
+
+                var T_name = document.getElementById("TaskName").value;
+                var T_task = document.getElementById("TaskDetail").value;
+                var obj;
+
+                myFirebaseRef = new Firebase("https://panatest.firebaseio.com/Task");
+                myFirebaseRef.on("child_added", function (snapshot) {
+                    obj = snapshot.val();
+                    console.log(obj.Name);
+                
+                    myFirebaseRef.child(T_name).update({
+                        Task: T_task
+                    });
+                });
+            }
+
     </script>
     
 
