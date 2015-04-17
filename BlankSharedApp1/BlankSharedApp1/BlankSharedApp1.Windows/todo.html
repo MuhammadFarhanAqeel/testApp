@@ -21,10 +21,10 @@
 
               <input type="text" id="Login_username" data-clear-btn="true" name="username" placeholder="Username"  value="">
               <input type="password" id="Login_pass" data-clear-btn="true" name="password" placeholder="Password"  value="" autocomplete="off">
-              <a href="#" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" onclick="loginFunc()" data-transition="slide"
-                 >Login</a>
+              <a href="#add" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" onclick="" data-transition="slide"
+                 >Add Task</a>
               <a href="#signup" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" data-transition="slide"
-                 >SignUp</a>
+                 >Add User</a>
 
           </div>
 
@@ -40,7 +40,7 @@
       <!--SignUp Page-->
       <div data-role="page" id="signup" style="background-image: url('images/backgroundimage.png');">
           <div data-role="header" data-positon="fixed" data-theme="b" class="ui-content" style="text-align: center;">
-             SIGNUP
+             ADD USER
               <a href="#frontpage" class="ui-btn ui-btn-right ui-icon-back ui-btn-icon-notext" data-transition="slide"
                  data-direction="reverse"></a>
           </div>
@@ -50,12 +50,11 @@
               <input type="email" id="Email" data-clear-btn="true" name="email" placeholder="Email"  value="">
               <input type="text" id="Username" data-clear-btn="true" name="username" placeholder="Username" value="">
               <input type="password" id="Password" data-clear-btn="true" name="password" placeholder="Password"  value="" autocomplete="off">
-              <input type="password"  data-clear-btn="true" name="password" placeholder="Retype-Password"  value="" autocomplete="off">
               <a href="#" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" onclick="signUp()" data-transition="slide" style="width: 260px;"
-                      >SignUp</a>
+                      >ADD USER</a>
 
-              <a href="#" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" onclick="Delete_User()" data-transition="slide" style="width: 260px;"
-                 >DELETE USER</a>
+<!--              <a href="#" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" onclick="Delete_User()" data-transition="slide" style="width: 260px;"
+                 >DELETE USER</a>-->
 
           </div>
 
@@ -80,16 +79,12 @@
               <a href="#" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" onclick="AddTask()" data-transition="slide" style="width: 115px;"
                       >ADD TASK</a>
 
-            
-
               <a href="#" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" onclick="Update_task()" data-transition="slide" style="width: 115px;"
                  >UPDATE TASK</a>
 
               <a href="#edit" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" data-transition="slide" onclick="viewTask()" style="width: 115px;"
                       >ViEW TASK</a>
-              <a href="#" class="Home  ui-btn ui-btn-inline ui-btn-b ui-shadow" onclick="Delete_Task()" data-transition="slide" style="width: 115px;"
-                 >DELETE TASK</a>
-              
+
           </div>
 
        </div>
@@ -103,22 +98,15 @@
           </div>
 
           <div data-role="main" id="edit_content" data-theme="">
-              <table data-role="table" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a">
+              <table data-role="table" id="Data_name" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a">
                   <thead>
                       <tr class="ui-bar-d">
                           <th data-priority="2">NAME</th>
                           <th>TASK</th>
-                          <th data-priority="3">EDIT</th>
-                          <th data-priority="5">DELETE</th>
+                          <th data-priority="3">DELETE</th>
                       </tr>
                   </thead>
                   <tbody>
-                      <tr>
-                          <th id="Data_name" ></th>
-                          <td class="title">Excercise at 9</td>
-                          <td>EDIT</td>
-                          <td>DELETE</td>
-                      </tr>
                   </tbody>
               </table>
           </div>
@@ -169,7 +157,7 @@
         var myFirebaseRef;
 
         function signUp() {
-            myFirebaseRef = new Firebase("https://panatest.firebaseio.com/users");
+            myFirebaseRef = new Firebase("https://todoap.firebaseio.com/users");
             var name = document.getElementById("Name").value;
             var email = document.getElementById("Email").value;
             var username = document.getElementById("Username").value;
@@ -179,56 +167,91 @@
             myFirebaseRef.child(name).set({    
             Email: email,
             Username: username,
-            password: password,
+            password: password
             
             });
         }
 
         function AddTask() {
-            myFirebaseRef = new Firebase("https://panatest.firebaseio.com/Task");
+            myFirebaseRef = new Firebase("https://todoap.firebaseio.com/Task");
             var T_name = document.getElementById("TaskName").value;
             var T_task = document.getElementById("TaskDetail").value;
             
-            myFirebaseRef.child(T_name).set({
-               
+            myFirebaseRef.child(T_name).update({
+                    "Name": T_name,
                     "Task": T_task
             });
         }
 
-        function viewTask() {
+       function viewTask() {
 
-           var myFirebaseRef = new Firebase("https://panatest.firebaseio.com/Task");
-           /* var my =  myFirebaseRef.on("child_added", function (snapshot) {
-                
-                var obj = snapshot.val();
-                console.log(obj);
-                //alert(obj);
-                 console.log(typeof (obj));
-                 document.getElementById("Data_name").innerHTML = Object.keys(obj.Name);
+           var table = document.getElementById("Data_name");
+           for(var i = table.rows.length - 1; i > 1; i--)
+           {
+               table.deleteRow(i);
+           }
+           var myFirebaseRef1 = new Firebase("https://todoap.firebaseio.com/Task");
 
-          }, function (errorObject) {
+                myFirebaseRef1.on("child_added", function (snapshot) {
+                var newPost = snapshot.val();
+                console.log("Name: " + newPost.Name);
+                console.log("Task: " + newPost.Task);
+
+                /*Get Table*/
+                var table = document.getElementById("Data_name");
+                /*Create Row*/
+                var row = table.insertRow(1);
+                /*Create Cell*/
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+/*
+                var cell4 = row.insertCell(3);
+*/
+
+                cell1.innerHTML = newPost.Name;
+                cell2.innerHTML = newPost.Task;
+
+                //Create Button
+/*
+                var editbutt = document.createElement('input'); // create a button
+                editbutt.setAttribute('type','button');
+                editbutt.setAttribute('name','edit');
+                editbutt.setAttribute('value',' EDIT ');
+                editbutt.setAttribute('data-rel','popup');
+                editbutt.setAttribute('class','ui-btn ui-corner-all ui-shadow ui-btn-inline');
+                editbutt.setAttribute('data-transition','pop');
+                editbutt.setAttribute('onclick','#popupBasic');
+                cell3.appendChild(editbutt);
+                editbutt.onclick = function () {
+                    var popup = open("", "Popup", "width=300,height=200");
+
+                };
+*/
+
+                var deletebutt = document.createElement('input'); // create a button
+                deletebutt.setAttribute('type','button');
+                deletebutt.setAttribute('name','delete');
+                deletebutt.setAttribute('value','DELETE');
+                deletebutt.setAttribute('data-rel','popup');
+                deletebutt.setAttribute('class','ui-btn ui-corner-all ui-shadow ui-btn-inline');
+                deletebutt.setAttribute('data-transition','pop');
+                cell3.appendChild(deletebutt);
+                deletebutt.onclick = function () {
+                    var T_name = cell1.innerHTML;
+                    myFirebaseRef = new Firebase("https://todoap.firebaseio.com/Task/" + T_name);
+                    myFirebaseRef.remove();
+                    viewTask();
+
+                };
             });
-        */
-          
-           myFirebaseRef.on("child_added", function (snapshot) {
-               var obj = snapshot.val();
-               console.log("Name: " + obj.Name);
-               
-               document.getElementById("Data_name").innerText += obj.Name;
-           });
 
-        }
-
-        function Delete_Task() {
-            var T_name = document.getElementById("TaskName").value;
-            myFirebaseRef = new Firebase("https://panatest.firebaseio.com/Task/" + T_name);
-            myFirebaseRef.remove();
         }
 
         function Delete_User() {
             var name = document.getElementById("Name").value;
 
-            myFirebaseRef = new Firebase("https://panatest.firebaseio.com/users/" + name);
+            myFirebaseRef = new Firebase("https://todoap.firebaseio.com/users/" + name);
             myFirebaseRef.remove();
         }
 
@@ -238,7 +261,7 @@
                 var T_task = document.getElementById("TaskDetail").value;
                 var obj;
 
-                myFirebaseRef = new Firebase("https://panatest.firebaseio.com/Task");
+                myFirebaseRef = new Firebase("https://todoap.firebaseio.com/Task");
                 myFirebaseRef.on("child_added", function (snapshot) {
                     obj = snapshot.val();
                     console.log(obj.Name);
